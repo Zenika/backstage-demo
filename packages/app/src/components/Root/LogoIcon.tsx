@@ -5,8 +5,8 @@ import LogoZenika from '../../themes/zenika.svg';
 
 const useStyles = makeStyles({
   svg: {
-    width: 'auto',
-    height: 28,
+    width: 96,
+    height: 96,
   },
 });
 

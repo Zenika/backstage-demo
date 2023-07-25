@@ -62,7 +62,7 @@ const newOptions: UnifiedThemeOptions = {
         hoverBackground: colors.error,
       },
       submenu: {
-        background: colors.bgSecondary,
+        background: colors.warning,
       },
     },
   },
