@@ -22,7 +22,8 @@
 			"extensions": [
 				"ckolkman.vscode-postgres",
 				"vivaxy.vscode-conventional-commits",
-				"esbenp.prettier-vscode"
+				"esbenp.prettier-vscode",
+				"eamodio.gitlens"
 			]
 		}
 	}
