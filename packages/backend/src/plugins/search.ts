@@ -9,6 +9,8 @@ import { DefaultCatalogCollatorFactory } from '@backstage/plugin-catalog-backend
 import { DefaultTechDocsCollatorFactory } from '@backstage/plugin-techdocs-backend';
 import { Router } from 'express';
 
+import { DefaultAdrCollatorFactory } from '@backstage/plugin-adr-backend';
+
 export default async function createPlugin(
   env: PluginEnvironment,
 ): Promise<Router> {
@@ -45,6 +47,19 @@ export default async function createPlugin(
     factory: DefaultTechDocsCollatorFactory.fromConfig(env.config, {
       discovery: env.discovery,
       logger: env.logger,
+      tokenManager: env.tokenManager,
+    }),
+  });
+
+  // ADR Collator
+  indexBuilder.addCollator({
+    schedule,
+    factory: DefaultAdrCollatorFactory.fromConfig({
+      cache: env.cache,
+      config: env.config,
+      discovery: env.discovery,
+      logger: env.logger,
+      reader: env.reader,
       tokenManager: env.tokenManager,
     }),
   });
