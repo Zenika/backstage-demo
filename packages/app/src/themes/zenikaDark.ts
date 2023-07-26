@@ -55,14 +55,14 @@ const newOptions: UnifiedThemeOptions = {
     infoBackground: colors.info,
     navigation: {
       background: colors.bgSecondary,
-      indicator: colors.bgMain,
+      indicator: colors.error,
       color: colors.text,
-      selectedColor: colors.link,
+      selectedColor: colors.text,
       navItem: {
         hoverBackground: colors.error,
       },
       submenu: {
-        background: colors.warning,
+        background: colors.bgSecondary,
       },
     },
   },
