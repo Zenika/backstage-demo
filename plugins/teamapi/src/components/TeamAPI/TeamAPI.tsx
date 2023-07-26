@@ -35,10 +35,11 @@ export const TeamAPI = () => {
 
   useMemo(() => {
     let url = 'TEAMAPI.md';
-    if (url !== '') {
+    const base = getEntitySourceLocation(entity).target;
+    if (url !== '' && base.startsWith('http')) {
       url = scmIntegrations.resolveUrl({
         url,
-        base: getEntitySourceLocation(entity).target,
+        base,
       });
     }
 
@@ -49,13 +50,22 @@ export const TeamAPI = () => {
         url,
       })}`,
     )
-      .then(response => response.json())
+      .then(response => {
+        if (response.status === 200) return response.json();
+        return { data: '' };
+      })
       .then(json => {
-        setTapiCard(
-          <InfoCard className={classes.infoCard} title="TEAM API">
-            <div dangerouslySetInnerHTML={cleanHTML(marked.parse(json.data))} />
-          </InfoCard>,
-        );
+        if (json.data !== '') {
+          setTapiCard(
+            <InfoCard className={classes.infoCard} title="TEAM API">
+              <div
+                dangerouslySetInnerHTML={cleanHTML(marked.parse(json.data))}
+              />
+            </InfoCard>,
+          );
+        } else {
+          setTapiCard(<></>);
+        }
       });
   }, [classes.infoCard, config, entity, scmIntegrations]);
 
