@@ -45,9 +45,30 @@ import {
   RELATION_PART_OF,
   RELATION_PROVIDES_API,
 } from '@backstage/catalog-model';
+import ZenikaLightTheme from './themes/zenikaLight';
+import ZenikaDarkTheme from './themes/zenikaDark';
+import { UnifiedThemeProvider } from '@backstage/theme';
 
 const app = createApp({
   apis,
+  themes: [
+    {
+      id: 'zenika_light',
+      title: 'Zenika Light',
+      variant: 'light',
+      Provider: ({ children }) => (
+        <UnifiedThemeProvider theme={ZenikaLightTheme} children={children} />
+      ),
+    },
+    {
+      id: 'zenika_dark',
+      title: 'Zenika Dark',
+      variant: 'dark',
+      Provider: ({ children }) => (
+        <UnifiedThemeProvider theme={ZenikaDarkTheme} children={children} />
+      ),
+    },
+  ],
   bindRoutes({ bind }) {
     bind(catalogPlugin.externalRoutes, {
       createComponent: scaffolderPlugin.routes.root,
