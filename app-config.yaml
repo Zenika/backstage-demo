@@ -25,7 +25,7 @@ backend:
     origin: http://localhost:3000
     methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
     credentials: true
-  
+
   database:
     client: pg
     connection:
@@ -58,11 +58,16 @@ proxy:
 # and an external cloud storage when deploying TechDocs for production use-case.
 # https://backstage.io/docs/features/techdocs/how-to-guides#how-to-migrate-from-techdocs-basic-to-recommended-deployment-approach
 techdocs:
-  builder: 'local' # Alternatives - 'external'
-  generator:
-    runIn: 'docker' # Alternatives - 'local'
+  builder: 'local'
+  local:
+    publishDirectory: '/opt/docs'
   publisher:
-    type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
+    type: 'local'
+  generator:
+    runIn: 'local'
+    mkdocs:
+      omitTechdocsCorePlugin: false
+      legacyCopyReadmeMdToIndexMd: false
 
 auth:
   # see https://backstage.io/docs/auth/ to learn about auth providers
