@@ -1,1 +1,2 @@
-export { teamapiPlugin, TeamapiPage } from './plugin';
+export { teamapiPlugin } from './plugin';
+export * from './components';

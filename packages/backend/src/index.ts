@@ -101,7 +101,7 @@ async function main() {
   apiRouter.use('/search', await search(searchEnv));
 
   apiRouter.use('/adr', await adr(adrEnv));
-  apiRouter.use('/teampi', await teamapi(teamapiEnv));
+  apiRouter.use('/teamapi', await teamapi(teamapiEnv));
 
   // Add backends ABOVE this line; this 404 handler is the catch-all fallback
   apiRouter.use(notFoundHandler());
