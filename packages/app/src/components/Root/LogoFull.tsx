@@ -1,20 +1,18 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
-import LogoZenika from '../../themes/zenika.svg';
+import LogoDarkZenika from '../../themes/logo_dark.svg';
 
 const useStyles = makeStyles({
   svg: {
-    width: 96,
-    height: 96,
+    width: 170,
+    height: 52,
   },
 });
 
 const LogoFull = () => {
-  const classes = useStyles();
+  const { svg } = useStyles();
 
-  return (
-    <img src={LogoZenika} alt="Logo Zenika" className={classes.svg} />
-  );
+  return <img src={LogoDarkZenika} alt="Logo Zenika" className={svg} />;
 };
 
 export default LogoFull;
