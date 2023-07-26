@@ -17,3 +17,11 @@ yarn new --select backend-plugin
 ```
 
 ![Create Backend plugin](create-back.png)
+
+Then, I register the backend plugin to the backend portal.
+
+```sh
+yarn add --cwd packages/backend @internal/plugin-teamapi-backend@^0.1.0
+```
+
+Then, I add the plugin router information in backend with the creation of `packages/backend/src/plugins/teamapi.ts` file and refer it in `packages/backend/src/index.ts`.
