@@ -55,7 +55,7 @@ const newOptions: UnifiedThemeOptions = {
     infoBackground: colors.info,
     navigation: {
       background: colors.bgSecondary,
-      indicator: colors.bgMain,
+      indicator: colors.error,
       color: colors.text,
       selectedColor: colors.text,
       navItem: {
