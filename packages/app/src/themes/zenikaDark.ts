@@ -57,9 +57,9 @@ const newOptions: UnifiedThemeOptions = {
       background: colors.bgSecondary,
       indicator: colors.bgMain,
       color: colors.text,
-      selectedColor: colors.link,
+      selectedColor: colors.text,
       navItem: {
-        hoverBackground: colors.text,
+        hoverBackground: colors.error,
       },
       submenu: {
         background: colors.bgSecondary,
