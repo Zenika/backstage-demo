@@ -48,6 +48,7 @@ import {
 import ZenikaLightTheme from './themes/zenikaLight';
 import ZenikaDarkTheme from './themes/zenikaDark';
 import { UnifiedThemeProvider } from '@backstage/theme';
+import { ToolboxPage } from '@drodil/backstage-plugin-toolbox';
 
 const app = createApp({
   apis,
@@ -148,6 +149,7 @@ const routes = (
     </Route>
     <Route path="/settings" element={<UserSettingsPage />} />
     <Route path="/catalog-graph" element={<CatalogGraphPage />} />
+    <Route path="/toolbox" element={<ToolboxPage />} />
   </FlatRoutes>
 );
 

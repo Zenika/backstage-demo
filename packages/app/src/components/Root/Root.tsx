@@ -29,6 +29,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import { useApp } from '@backstage/core-plugin-api';
+import BuildIcon from '@material-ui/icons/Build';
 
 const useSidebarLogoStyles = makeStyles({
   root: {
@@ -115,6 +116,7 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
         <SidebarDivider />
         <SidebarScrollWrapper>
           <SidebarItem icon={MapIcon} to="tech-radar" text="Tech Radar" />
+          <SidebarItem icon={BuildIcon} to="toolbox" text="ToolBox" />
         </SidebarScrollWrapper>
       </SidebarGroup>
       <SidebarSpace />
