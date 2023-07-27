@@ -33,6 +33,7 @@ import { ServerPermissionClient } from '@backstage/plugin-permission-node';
 import { DefaultIdentityClient } from '@backstage/plugin-auth-node';
 
 import adr from './plugins/adr';
+import teamapi from './plugins/teamapi';
 
 function makeCreateEnv(config: Config) {
   const root = getRootLogger();
@@ -89,6 +90,7 @@ async function main() {
   const appEnv = useHotMemoize(module, () => createEnv('app'));
 
   const adrEnv = useHotMemoize(module, () => createEnv('adr'));
+  const teamapiEnv = useHotMemoize(module, () => createEnv('teamapi'));
 
   const apiRouter = Router();
   apiRouter.use('/catalog', await catalog(catalogEnv));
@@ -99,6 +101,7 @@ async function main() {
   apiRouter.use('/search', await search(searchEnv));
 
   apiRouter.use('/adr', await adr(adrEnv));
+  apiRouter.use('/teamapi', await teamapi(teamapiEnv));
 
   // Add backends ABOVE this line; this 404 handler is the catch-all fallback
   apiRouter.use(notFoundHandler());
