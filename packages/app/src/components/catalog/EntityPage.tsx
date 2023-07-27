@@ -61,6 +61,11 @@ import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 import { EntityAdrContent, isAdrAvailable } from '@backstage/plugin-adr';
 import { TeamAPI } from '@internal/plugin-teamapi';
 
+import {
+  isGitlabAvailable,
+  EntityGitlabContent,
+} from '@immobiliarelabs/backstage-plugin-gitlab';
+
 const techdocsContent = (
   <EntityTechdocsContent>
     <TechDocsAddons>
@@ -150,6 +155,10 @@ const serviceEntityPage = (
   <EntityLayout>
     <EntityLayout.Route path="/" title="Overview">
       {overviewContent}
+    </EntityLayout.Route>
+
+    <EntityLayout.Route if={isGitlabAvailable} path="/gitlab" title="Gitlab">
+      <EntityGitlabContent />
     </EntityLayout.Route>
 
     <EntityLayout.Route path="/ci-cd" title="CI/CD">
