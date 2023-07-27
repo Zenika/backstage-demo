@@ -1,0 +1,8 @@
+site_name: 'Backstage Demo Docs'
+
+nav:
+  - Home: index.md
+  - Plugins: plugin-list.md
+
+plugins:
+  - techdocs-core

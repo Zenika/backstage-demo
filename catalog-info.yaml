@@ -3,9 +3,102 @@ kind: Component
 metadata:
   name: backstage
   description: An example of a Backstage application.
+  links:
+    - url: https://zenika.com
+      title: Zenika Website
+      icon: public
   annotations:
     backstage.io/adr-location: adrs
+    backstage.io/techdocs-ref: dir:.
 spec:
-  type: website
-  owner: john@example.com
+  type: service
+  owner: group:zenika
   lifecycle: experimental
+  providesApis:
+    - petstore-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: zenika
+  description: The main group
+spec:
+  type: business-unit
+  profile:
+    displayName: Zenika
+    email: infrastructure@example.com
+    picture: https://training.zenika.com/_nuxt/img/zenika_logo_horizontal_black.a41f832.png
+  children: [g-squad, backstage]
+  members: [gouz]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: g-squad
+  description: A task force team
+spec:
+  type: business-unit
+  profile:
+    displayName: G-Squad
+    email: infrastructure@example.com
+    picture: https://training.zenika.com/_nuxt/img/zenika_logo_horizontal_black.a41f832.png
+  parent: zenika
+  children: []
+  members: [gouz,jgloaguen]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: backstage
+  description: The backstage team of zenika
+spec:
+  type: business-unit
+  profile:
+    displayName: Zenika/Backstage
+    email: infrastructure@example.com
+    picture: https://training.zenika.com/_nuxt/img/zenika_logo_horizontal_black.a41f832.png
+  parent: zenika
+  children: []
+  members: [gouz, vlinas]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: gouz
+spec:
+  profile:
+    displayName: Sylvain Gougouzian
+    email: gouz-dail@example.com
+    picture: https://sylvain.gougouzian.fr/me.jpg
+  memberOf: [g-squad, zenika]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: jgloaguen
+spec:
+  profile:
+    displayName: Jim Gloaguen
+    email: jim-cube@example.com
+  memberOf: [g-squad, zenika]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: vlinas
+spec:
+  profile:
+    displayName: Vincent Linas
+    email: wine-hundred@example.com
+  memberOf: [zenika]
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: petstore-api
+spec:
+  type: openapi
+  lifecycle: production
+  owner: zenika
+  definition:
+    $text: https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v2.0/json/petstore.json
