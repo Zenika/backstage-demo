@@ -13,8 +13,8 @@ const colors = {
   success: '#4CA8E7',
   text: '#F2F2F2',
   link: '#00EB84',
-  bgMain: '#515151',
-  bgSecondary: '#1E1E1E',
+  bgMain: '#1E1E1E',
+  bgSecondary: '#515151',
 };
 
 const defaultTheme = themes.dark.getTheme('v5');
@@ -54,7 +54,7 @@ const newOptions: UnifiedThemeOptions = {
     warningBackground: colors.warning,
     infoBackground: colors.info,
     navigation: {
-      background: colors.bgSecondary,
+      background: colors.bgMain,
       indicator: colors.error,
       color: colors.text,
       selectedColor: colors.text,
@@ -62,37 +62,37 @@ const newOptions: UnifiedThemeOptions = {
         hoverBackground: colors.error,
       },
       submenu: {
-        background: colors.bgSecondary,
+        background: colors.bgMain,
       },
     },
   },
   defaultPageTheme: 'home',
   fontFamily: 'Nunito Semi Bold, Arial',
   pageTheme: {
-    home: genPageTheme({ colors: ['#EE2238', '#BF1D67'], shape: shapes.wave2 }),
+    home: genPageTheme({ colors: ['#BF1D67', '#EE2238'], shape: shapes.wave2 }),
     documentation: genPageTheme({
       colors: ['#A188EF', '#7C86E9'],
       shape: shapes.round,
     }),
-    tool: genPageTheme({ colors: ['#4CA8E7', '#4F8DF5'], shape: shapes.round }),
+    tool: genPageTheme({ colors: ['#BF1D67', '#EE2238'], shape: shapes.wave2 }),
     service: genPageTheme({
-      colors: ['#00EB84', '#00E3EC'],
-      shape: shapes.round,
+      colors: ['#BF1D67', '#EE2238'],
+      shape: shapes.wave2,
     }),
     website: genPageTheme({
-      colors: ['#00EB84', '#00E3EC'],
-      shape: shapes.round,
+      colors: ['#BF1D67', '#EE2238'],
+      shape: shapes.wave2,
     }),
     library: genPageTheme({
-      colors: ['#00EB84', '#00E3EC'],
-      shape: shapes.round,
+      colors: ['#BF1D67', '#EE2238'],
+      shape: shapes.wave2,
     }),
     other: genPageTheme({
-      colors: ['#00EB84', '#00E3EC'],
-      shape: shapes.round,
+      colors: ['#BF1D67', '#EE2238'],
+      shape: shapes.wave2,
     }),
-    app: genPageTheme({ colors: ['#00EB84', '#00E3EC'], shape: shapes.round }),
-    apis: genPageTheme({ colors: ['#00EB84', '#00E3EC'], shape: shapes.round }),
+    app: genPageTheme({ colors: ['#BF1D67', '#EE2238'], shape: shapes.wave2 }),
+    apis: genPageTheme({ colors: ['#BF1D67', '#EE2238'], shape: shapes.wave2 }),
   },
   htmlFontSize: 16,
   components: (defaultTheme as UnifiedThemeOptions).components,
