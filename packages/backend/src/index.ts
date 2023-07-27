@@ -34,6 +34,7 @@ import { DefaultIdentityClient } from '@backstage/plugin-auth-node';
 
 import adr from './plugins/adr';
 import teamapi from './plugins/teamapi';
+import gitlab from './plugins/gitlab';
 
 function makeCreateEnv(config: Config) {
   const root = getRootLogger();
@@ -91,6 +92,7 @@ async function main() {
 
   const adrEnv = useHotMemoize(module, () => createEnv('adr'));
   const teamapiEnv = useHotMemoize(module, () => createEnv('teamapi'));
+  const gitlabEnv = useHotMemoize(module, () => createEnv('gitlab'));
 
   const apiRouter = Router();
   apiRouter.use('/catalog', await catalog(catalogEnv));
@@ -102,6 +104,7 @@ async function main() {
 
   apiRouter.use('/adr', await adr(adrEnv));
   apiRouter.use('/teamapi', await teamapi(teamapiEnv));
+  apiRouter.use('/gitlab', await gitlab(gitlabEnv));
 
   // Add backends ABOVE this line; this 404 handler is the catch-all fallback
   apiRouter.use(notFoundHandler());
