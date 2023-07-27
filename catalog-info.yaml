@@ -10,6 +10,7 @@ metadata:
   annotations:
     backstage.io/adr-location: adrs
     backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: backstage/backstage
 spec:
   type: service
   owner: group:zenika
@@ -44,7 +45,7 @@ spec:
     picture: https://training.zenika.com/_nuxt/img/zenika_logo_horizontal_black.a41f832.png
   parent: zenika
   children: []
-  members: [gouz,jgloaguen]
+  members: [gouz, jgloaguen]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group

@@ -60,6 +60,13 @@ import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 
 import { EntityAdrContent, isAdrAvailable } from '@backstage/plugin-adr';
 import { TeamAPI } from '@internal/plugin-teamapi';
+import {
+  EntityGithubInsightsContent,
+  EntityGithubInsightsLanguagesCard,
+  EntityGithubInsightsReadmeCard,
+  EntityGithubInsightsReleasesCard,
+  isGithubInsightsAvailable,
+  } from '@roadiehq/backstage-plugin-github-insights';
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -143,6 +150,19 @@ const overviewContent = (
     <Grid item md={6} xs={12}>
       <EntityHasSubcomponentsCard variant="gridItem" />
     </Grid>
+
+    <EntitySwitch>
+      <EntitySwitch.Case if={e => Boolean(isGithubInsightsAvailable(e))}>
+        <Grid item md={6}>
+          <EntityGithubInsightsLanguagesCard />
+          <EntityGithubInsightsReleasesCard />
+        </Grid>
+        <Grid item md={6}>
+          <EntityGithubInsightsReadmeCard maxHeight={350} />
+        </Grid>
+      </EntitySwitch.Case>
+    </EntitySwitch>
+
   </Grid>
 );
 
@@ -182,6 +202,10 @@ const serviceEntityPage = (
       {techdocsContent}
     </EntityLayout.Route>
 
+    <EntityLayout.Route path="/code-insights" title="Code Insights">
+      <EntityGithubInsightsContent />
+    </EntityLayout.Route>
+
     <EntityLayout.Route if={isAdrAvailable} path="/adrs" title="ADRs">
       <EntityAdrContent />
     </EntityLayout.Route>
@@ -211,6 +235,9 @@ const websiteEntityPage = (
 
     <EntityLayout.Route path="/docs" title="Docs">
       {techdocsContent}
+    </EntityLayout.Route>
+    <EntityLayout.Route path="/code-insights" title="Code Insights">
+      <EntityGithubInsightsContent />
     </EntityLayout.Route>
   </EntityLayout>
 );
