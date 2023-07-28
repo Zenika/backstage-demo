@@ -29,6 +29,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import { useApp } from '@backstage/core-plugin-api';
 import BuildIcon from '@material-ui/icons/Build';
+import LayersIcon from '@material-ui/icons/Layers';
 
 const useSidebarLogoStyles = makeStyles({
   root: {
@@ -110,6 +111,7 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
           </SidebarSubmenu>
         </SidebarItem>
         <SidebarItem icon={LibraryBooks} to="docs" text="Docs" />
+        <SidebarItem icon={LayersIcon} to="explore" text="Explore" />
         <SidebarItem icon={CreateComponentIcon} to="create" text="Create..." />
         {/* End global nav */}
         <SidebarDivider />

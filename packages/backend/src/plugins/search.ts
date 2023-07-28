@@ -10,6 +10,7 @@ import { DefaultTechDocsCollatorFactory } from '@backstage/plugin-techdocs-backe
 import { Router } from 'express';
 
 import { DefaultAdrCollatorFactory } from '@backstage/plugin-adr-backend';
+import { ToolDocumentCollatorFactory } from '@backstage/plugin-explore-backend';
 
 export default async function createPlugin(
   env: PluginEnvironment,
@@ -63,6 +64,16 @@ export default async function createPlugin(
       tokenManager: env.tokenManager,
     }),
   });
+
+  // collator gathers entities from explore.
+  indexBuilder.addCollator({
+    schedule,
+    factory: ToolDocumentCollatorFactory.fromConfig(env.config, {
+      discovery: env.discovery,
+      logger: env.logger,
+    }),
+  });
+  
 
   // The scheduler controls when documents are gathered from collators and sent
   // to the search engine for indexing.
