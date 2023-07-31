@@ -39,7 +39,7 @@ import {
   EntityOwnershipCard,
 } from '@backstage/plugin-org';
 import { EntityTechdocsContent } from '@backstage/plugin-techdocs';
-import { EmptyState } from '@backstage/core-components';
+import { EmptyState, ItemCardGrid } from '@backstage/core-components';
 import {
   Direction,
   EntityCatalogGraphCard,
@@ -60,6 +60,7 @@ import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 
 import { EntityAdrContent, isAdrAvailable } from '@backstage/plugin-adr';
 import { TeamAPI } from '@internal/plugin-teamapi';
+
 
 import {
   isGitlabAvailable,

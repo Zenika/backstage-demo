@@ -49,7 +49,8 @@ import ZenikaLightTheme from './themes/zenikaLight';
 import ZenikaDarkTheme from './themes/zenikaDark';
 import { UnifiedThemeProvider } from '@backstage/theme';
 import { ToolboxPage } from '@drodil/backstage-plugin-toolbox';
-import { ExplorePage } from '@backstage/plugin-explore';
+import { ExplorePage } from './components/explore/ExplorePage';
+
 const app = createApp({
   apis,
   themes: [
