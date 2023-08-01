@@ -63,6 +63,7 @@ export default async function createPlugin(
       tokenManager: env.tokenManager,
     }),
   });
+  
 
   // The scheduler controls when documents are gathered from collators and sent
   // to the search engine for indexing.

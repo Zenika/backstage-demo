@@ -49,6 +49,7 @@ import ZenikaLightTheme from './themes/zenikaLight';
 import ZenikaDarkTheme from './themes/zenikaDark';
 import { UnifiedThemeProvider } from '@backstage/theme';
 import { ToolboxPage } from '@drodil/backstage-plugin-toolbox';
+import { ExplorePage } from './components/explore/ExplorePage';
 
 const app = createApp({
   apis,
@@ -132,6 +133,7 @@ const routes = (
     </Route>
     <Route path="/create" element={<ScaffolderPage />} />
     <Route path="/api-docs" element={<ApiExplorerPage />} />
+    <Route path="/explore" element={<ExplorePage />} />
     <Route
       path="/tech-radar"
       element={<TechRadarPage width={1500} height={800} />}

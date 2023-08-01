@@ -35,6 +35,7 @@ import { DefaultIdentityClient } from '@backstage/plugin-auth-node';
 import adr from './plugins/adr';
 import teamapi from './plugins/teamapi';
 import gitlab from './plugins/gitlab';
+import explore from './plugins/explore';
 
 function makeCreateEnv(config: Config) {
   const root = getRootLogger();
@@ -83,6 +84,7 @@ async function main() {
   const createEnv = makeCreateEnv(config);
 
   const catalogEnv = useHotMemoize(module, () => createEnv('catalog'));
+  const exploreEnv = useHotMemoize(module, () => createEnv('explore'));
   const scaffolderEnv = useHotMemoize(module, () => createEnv('scaffolder'));
   const authEnv = useHotMemoize(module, () => createEnv('auth'));
   const proxyEnv = useHotMemoize(module, () => createEnv('proxy'));
@@ -95,6 +97,7 @@ async function main() {
   const gitlabEnv = useHotMemoize(module, () => createEnv('gitlab'));
 
   const apiRouter = Router();
+  apiRouter.use('/explore', await explore(exploreEnv));
   apiRouter.use('/catalog', await catalog(catalogEnv));
   apiRouter.use('/scaffolder', await scaffolder(scaffolderEnv));
   apiRouter.use('/auth', await auth(authEnv));
