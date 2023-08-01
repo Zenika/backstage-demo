@@ -12,6 +12,285 @@ apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: guests
+  description: The group referencing all the guest users
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
 spec:
   type: team
+  profile:
+    displayName: Guests
+    email: gests@example.com
+    picture: https://cdn.pixabay.com/photo/2018/03/21/06/30/community-3245739_1280.png
   children: []
+  parent: ops
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Practices
+  description: The root group of the practices groups
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: root
+  profile:
+    displayName: Pratices
+    email: practrices@example.com
+    # picture: TODO
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Software
+  description: The group referencing all the users and groups with software skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Software
+    email: software@example.com
+    # picture: TODO
+  children: []
+  parent: Practices
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Architecture
+  description: The group referencing all the users and groups with sofware architecture activities
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Architecture
+    email: architecture@example.com
+    # picture: TODO
+  children: []
+  parent: Software
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Backend
+  description: The group referencing all the users and groups with backend development skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Backend Development
+    email: backend@example.com
+    # picture: TODO
+  children: []
+  parent: Software
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Backend
+  description: The group referencing all the users and groups with backend development skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Backend Development
+    email: backend@example.com
+    # picture: TODO
+  children: []
+  parent: Software
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: JAVA
+  description: Java User Group
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: JAVA
+    email: java@example.com
+    # picture: TODO
+  children: []
+  parent: Backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: .NET
+  description: The group referencing all the users and groups with .NET backend development skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: .NET
+    email: dotNET@example.com
+    # picture: TODO
+  children: []
+  parent: Backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: NodeJS
+  description: The group referencing all the users and groups with .NET backend development skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: NodeJS
+    email: nodejs@example.com
+    # picture: TODO
+  children: []
+  parent: Backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Frontend
+  description: The group referencing all the users and groups with frontend development skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Frontend Development
+    email: frontend@example.com
+    # picture: TODO
+  children: []
+  parent: Software
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Angular
+  description: The group referencing all the users and groups with Angular frontend development skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Angular
+    email: angular@example.com
+    # picture: TODO
+  children: []
+  parent: Frontend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: ReactJS
+  description: The group referencing all the users and groups with ReactJS frontend development skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: ReactJS
+    email: reactjs@example.com
+    # picture: TODO
+  children: []
+  parent: Frontend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: DevOps
+  description: The group referencing all the users and groups with DevOps skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: DevOps
+    email: Dev-Ops@example.com
+    # picture: TODO
+  children: []
+  parent: Software
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Azure
+  description: The group referencing all the users and groups with Azure cloud platform skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Azure
+    email: azure@example.com
+    # picture: TODO
+  children: []
+  parent: DevOps
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Kubernetes
+  description: The group referencing all the users and groups with Kubernetes skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Kubernetes
+    email: kubernetes@example.com
+    # picture: TODO
+  children: []
+  parent: DevOps
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Business
+  description: The group referencing all the users and groups with tranversal or business activities
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: business
+    email: business@example.com
+    # picture: TODO
+  children: []
+  parent: Practices
