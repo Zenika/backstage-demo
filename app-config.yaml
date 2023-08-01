@@ -103,6 +103,12 @@ catalog:
       rules:
         - allow: [User, Group]
 
+    # Local example users data
+    - type: file
+      target: ../../examples/users.yaml
+      rules:
+        - allow: [User]
+
     ## Uncomment these lines to add more example data
     # - type: url
     #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml
