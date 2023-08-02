@@ -18,13 +18,12 @@ metadata:
       title: Slack chanel
       icon: message
 spec:
-  type: team
+  type: root
   profile:
     displayName: Guests
     email: gests@example.com
     picture: https://cdn.pixabay.com/photo/2018/03/21/06/30/community-3245739_1280.png
   children: []
-  parent: ops
 ---
 # Practice Group tree
 apiVersion: backstage.io/v1alpha1
@@ -39,7 +38,7 @@ metadata:
 spec:
   type: root
   profile:
-    displayName: Pratices
+    displayName: Practices
     email: practrices@example.com
     picture: https://api.dicebear.com/6.x/initials/svg?seed=Pratices
   children: []
@@ -353,60 +352,6 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: Sales
-  description: The group referencing all the users and groups with sales related activities
-  links:
-    - url: https://slack.com/
-      title: Slack chanel
-      icon: message
-spec:
-  type: business-unit
-  profile:
-    displayName: Sales
-    email: sales@example.com
-    picture: https://api.dicebear.com/6.x/initials/svg?seed=Sales
-  children: []
-  parent: Organization
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: Marketing
-  description: The team associate to the marketing of products
-  links:
-    - url: https://slack.com/
-      title: Slack chanel
-      icon: message
-spec:
-  type: team
-  profile:
-    displayName: Marketing
-    email: marketing@example.com
-    picture: https://api.dicebear.com/6.x/initials/svg?seed=Marketing
-  children: []
-  parent: Sales
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: Customer_Service
-  description: the team associate to customer service
-  links:
-    - url: https://slack.com/
-      title: Slack chanel
-      icon: message
-spec:
-  type: team
-  profile:
-    displayName: Customer Service
-    email: SAV@example.com
-    picture: https://api.dicebear.com/6.x/initials/svg?seed=Customer%20Service
-  children: []
-  parent: Sales
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
   name: Market_Place
   description: The group referencing the teams of the Market place
   links:
@@ -533,24 +478,6 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: team-vendor-2
-  description: the first team on the vendor product
-  links:
-    - url: https://slack.com/
-      title: Slack chanel
-      icon: message
-spec:
-  type: team
-  profile:
-    displayName: team-vendor-2
-    email: team-vendor-2@example.com
-    picture: https://api.dicebear.com/6.x/initials/svg?seed=team%20vendor-2
-  children: []
-  parent: Vendor
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
   name: Messaging
   description: The group referencing all the teams dedicated to the Messaging project
   links:
@@ -578,7 +505,7 @@ metadata:
 spec:
   type: team
   profile:
-    displayName: team-vendor-1
+    displayName: team-messaging-1
     email: team-messaging-1@example.com
     picture: https://api.dicebear.com/6.x/initials/svg?seed=team%20messaging-1
   children: []
@@ -670,24 +597,6 @@ spec:
   profile:
     displayName: team-backstage-1
     email: team-backstage-1@example.com
-    picture: https://api.dicebear.com/6.x/initials/svg?seed=team%20backstage-1
-  parent: Backstage
-  children: []
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: team-backstage-2
-  description: Team backstage 2
-  links:
-    - url: https://slack.com/
-      title: Slack chanel
-      icon: message
-spec:
-  type: team
-  profile:
-    displayName: team-backstage-2
-    email: team-backstage-2@example.com
     picture: https://api.dicebear.com/6.x/initials/svg?seed=team%20backstage-1
   parent: Backstage
   children: []

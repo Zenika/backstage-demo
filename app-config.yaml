@@ -109,6 +109,24 @@ catalog:
       rules:
         - allow: [User]
 
+    # Local example domains
+    - type: file
+      target: ../../examples/domains.yaml
+      rules:
+        - allow: [Domain]
+
+    # Local example systems
+    - type: file
+      target: ../../examples/systems.yaml
+      rules:
+        - allow: [System]
+
+    # Local example components
+    - type: file
+      target: ../../examples/components.yaml
+      rules:
+        - allow: [Component]
+
     ## Uncomment these lines to add more example data
     # - type: url
     #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml

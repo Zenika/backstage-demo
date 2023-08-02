@@ -20,7 +20,7 @@ spec:
     displayName: Nigel Manning
     email: nigel-manning@example.com
     picture: https://avatars.dicebear.com/api/avataaars/nigel-manning@example.com.svg?background=%23fff
-  memberOf: [team-messaging-1, Azure]
+  memberOf: [team-messaging-1, Azure, Kafka]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -42,7 +42,7 @@ spec:
     displayName: Colette Brock
     email: colette-brock@example.com
     picture: https://avatars.dicebear.com/api/avataaars/colette-brock@example.com.svg?background=%23fff
-  memberOf: [team-vendor-2, Angular, ReactJS]
+  memberOf: [team-vendor-1, Angular, ReactJS]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -108,7 +108,7 @@ spec:
     displayName: Jean Dupond
     email: jean-dupond@example.com
     picture: https://avatars.dicebear.com/api/avataaars/toto@example.com.svg?background=%23fff
-  memberOf: [team-backstage-2, NodeJS]
+  memberOf: [team-backstage-1, NodeJS]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -119,7 +119,7 @@ spec:
     displayName: Pierre Mathieu
     email: pierre-mathieu@example.com
     picture: https://avatars.dicebear.com/api/avataaars/pm@example.com.svg?background=%23fff
-  memberOf: [team-backstage-2, ReactJS]
+  memberOf: [team-backstage-1, ReactJS]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -130,7 +130,7 @@ spec:
     displayName: Pierre cayou
     email: pierre-cayou@example.com
     picture: https://avatars.dicebear.com/api/avataaars/pc_@example.com.svg?background=%23fff
-  memberOf: [team-backstage-2, Lean]
+  memberOf: [team-messaging-1, Lean]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -163,7 +163,29 @@ spec:
     displayName: Viviane Dome
     email: viviane-dome@example.com
     picture: https://avatars.dicebear.com/api/avataaars/vivianne@example.com.svg?background=%23fff
-  memberOf: [team-payment-1, team-payment-2, JAVA]
+  memberOf: [team-payment-2, JAVA, Angular]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: marc.romero
+spec:
+  profile:
+    displayName: Marc Romero
+    email: marc-romero@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/marc-romero@example.com.svg?background=%23fff
+  memberOf: [team-payment-1, JAVA, Angular]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: james.botero
+spec:
+  profile:
+    displayName: James Botero
+    email: james-botero@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/james-botero@example.com.svg?background=%23fff
+  memberOf: [team-payment-2, JAVA, Angular]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
