@@ -1,0 +1,18 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: payment-lib
+  description: a lib with all the low level payment operations
+  tags:
+    - java
+    - jsp
+  links:
+    - url: https://mvnrepository.com/
+      title: maven Repository page
+spec:
+  type: library
+  lifecycle: production
+  owner: team-payment-2
+  subcomponentOf: payment_webservices
+  system: Payment

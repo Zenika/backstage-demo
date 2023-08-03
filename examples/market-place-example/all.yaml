@@ -1,0 +1,16 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: market-place-example-all
+  description: A collection of all market-place example entities, except users, groups, and templates
+spec:
+  targets:
+    - ./domains.yaml
+    - ./groups.yaml
+    - ./systems.yaml
+    - ./users.yaml
+    - ./payment/all.yaml
+    - ./inventory/all.yaml
+    - ./messaging/all.yaml
+    - ./vendor/all.yaml

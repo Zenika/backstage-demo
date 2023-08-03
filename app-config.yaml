@@ -85,7 +85,7 @@ catalog:
     entityFilename: catalog-info.yaml
     pullRequestBranchName: backstage-integration
   rules:
-    - allow: [Component, System, API, Resource, Location, User, Group]
+    - allow: [Domain, Component, System, API, Resource, Location, User, Group]
   locations:
     # Local example data, file locations are relative to the backend process, typically `packages/backend`
     - type: file
@@ -103,29 +103,15 @@ catalog:
       rules:
         - allow: [User, Group]
 
-    # Local example users data
+    # Local example practices data
     - type: file
-      target: ../../examples/users.yaml
+      target: ../../examples/practices.yaml
       rules:
-        - allow: [User]
+        - allow: [User, Group]
 
-    # Local example domains
+    # Local example data, file locations are relative to the backend process, typically `packages/backend`
     - type: file
-      target: ../../examples/domains.yaml
-      rules:
-        - allow: [Domain]
-
-    # Local example systems
-    - type: file
-      target: ../../examples/systems.yaml
-      rules:
-        - allow: [System]
-
-    # Local example components
-    - type: file
-      target: ../../examples/components.yaml
-      rules:
-        - allow: [Component]
+      target: /workspaces/backstage-demo/examples/market-place-example/all.yaml
 
     ## Uncomment these lines to add more example data
     # - type: url

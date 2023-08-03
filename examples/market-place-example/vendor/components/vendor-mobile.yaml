@@ -1,0 +1,19 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: vendor-mobile
+  description: market place mobile application
+  tags:
+    - flutter
+  links:
+    - url: https://play.google.com/
+      title: google playstore app page
+spec:
+  type: website
+  lifecycle: experimental
+  owner: team-vendor-1
+  # dependsOn: [TODO]
+  # providesApis: [TODO]
+  # consumesApis: [inventory-catalog-api,payment_api]
+  system: Vendor

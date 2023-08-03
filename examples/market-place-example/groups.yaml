@@ -1,0 +1,252 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Market_Place
+  description: The group referencing the teams of the Market place
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: business-unit
+  profile:
+    displayName: Market Place
+    email: mp@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=
+  children: []
+  parent: Organization
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Software_Factory
+  description: The group referencing the teams of the software factory unit
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: product-area
+  profile:
+    displayName: Software Factory
+    email: softFactory@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Software%20Factory
+  children: []
+  parent: Market_Place
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Payment
+  description: The group referencing all the teams dedicated to the payment product
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: product-area
+  profile:
+    displayName: Payment
+    email: payment@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Payment
+  children: []
+  parent: Software_Factory
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-payment-1
+  description: the first team on the payment product
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: team-payment-1
+    email: team-payment-1@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=team%20payment-1
+  children: []
+  parent: Payment
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-payment-2
+  description: the first team on the payment product
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: team-payment-2
+    email: team-payment-2@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=team%20payment-2
+  children: []
+  parent: Payment
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Vendor
+  description: The group referencing all the teams dedicated to the vendor products
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: product-area
+  profile:
+    displayName: Vendor
+    email: vendor@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Vendor
+  children: []
+  parent: Software_Factory
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-vendor-1
+  description: the first team on the vendor product
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: team-vendor-1
+    email: team-vendor-1@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=team%20vendor-1
+  children: []
+  parent: Vendor
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Messaging
+  description: The group referencing all the teams dedicated to the Messaging project
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: product-area
+  profile:
+    displayName: Messaging
+    email: messaging@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Messaging
+  children: []
+  parent: Software_Factory
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-messaging-1
+  description: the first team on the messaging project
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: team-messaging-1
+    email: team-messaging-1@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=team%20messaging-1
+  children: []
+  parent: Messaging
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Inventory
+  description: The group referencing all the teams dedicated to the Inventory project
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: product-area
+  profile:
+    displayName: Inventory
+    email: inventory@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Inventory
+  children: []
+  parent: Software_Factory
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-inventory-1
+  description: the first team on the Inventory project
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: team-inventory-1
+    email: team-inventory-1@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=team%20inventory-1
+  children: []
+  parent: Inventory
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Infrastructure
+  description: The infra department
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: business-unit
+  profile:
+    displayName: Infrastructure
+    email: infra@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Infrastructure
+  parent: Market_Place
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Backstage
+  description: The backstage sub-department
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: product-area
+  profile:
+    displayName: Backstage
+    email: backstage@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Backstage
+  parent: Infrastructure
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-backstage-1
+  description: Team backstage 1
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: team-backstage-1
+    email: team-backstage-1@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=team%20backstage-1
+  parent: Backstage
+  children: []

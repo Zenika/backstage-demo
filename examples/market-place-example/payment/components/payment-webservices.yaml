@@ -1,0 +1,21 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: payment_webservices
+  description: Payment back-end
+  tags:
+    - java
+    - springboot
+  links:
+    - url: https://www.gravitee.io/
+      title: gravitee configuration page
+spec:
+  type: service
+  lifecycle: production
+  owner: team-payment-1
+  providesApis:
+    - payment-api
+  consumesApis:
+    - messaging-kafka-connector-api
+  system: Payment

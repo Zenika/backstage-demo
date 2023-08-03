@@ -1,0 +1,23 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: inventory-api
+  description: http api to manage and request the invetory
+  links:
+    - url: https://github.com/swagger-api/swagger-petstore
+      title: GitHub Repo
+      icon: github
+    - url: https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml
+      title: API Spec
+      icon: code
+  annotations:
+#   backstage.io/adr-location: adrs
+#   backstage.io/techdocs-ref: dir:.
+spec:
+  type: openapi
+  lifecycle: production
+  subcomponentOf: inventory-catalog
+  owner: team-inventory-1
+  definition:
+    $text: https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v2.0/json/petstore.json

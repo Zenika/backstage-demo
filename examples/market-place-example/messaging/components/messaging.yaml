@@ -1,0 +1,21 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: messaging
+  description: Messaging platform (KAFKA)
+  tags:
+    - kafka
+  links:
+    - url: https://kafka.apache.org/20/documentation.html
+      title: Apache Kafka documentaion
+spec:
+  type: service
+  lifecycle: production
+  owner: team-messaging-1
+  providesApis:
+    - messaging-kafka-connector-api
+  dependsOn:
+    - resource:default/messaging-kafka-zookeepers
+    - resource:default/messaging-kafka-brokers
+  system: Messaging

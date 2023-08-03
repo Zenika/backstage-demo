@@ -1,0 +1,19 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: vendor-front
+  description: market place front application
+  tags:
+    - react
+  links:
+    - url: https://react.dev/
+      title: public url
+spec:
+  type: website
+  lifecycle: production
+  owner: team-vendor-1
+  # dependsOn: [TODO]
+  # providesApis: [TODO]
+  # consumesApis: [inventory-catalog-api,payment_api]
+  system: Vendor

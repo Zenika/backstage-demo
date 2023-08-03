@@ -1,0 +1,12 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: messaging-kafka-zookeepers
+  description: Handles coordination and sharing inf Kafka ecos
+spec:
+  type: cluster
+  owner: team-messaging-1
+  partof: messaging
+  dependsOn:
+    - resource:default/messaging-kafka-brokers

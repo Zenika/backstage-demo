@@ -1,0 +1,9 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: vendor-all
+spec:
+  targets:
+    - ./components/vendor-mobile.yaml
+    - ./components/vendor-front.yaml

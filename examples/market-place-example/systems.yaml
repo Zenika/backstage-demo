@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: payment
+  name: Payment
   description: payment system
   links:
     - url: https://fr.wordpress.org/

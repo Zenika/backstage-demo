@@ -1,0 +1,11 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: inventory-db
+  description: Stores items details
+spec:
+  type: database
+  owner: team-inventory-1
+  partof: inventory-catalog
+  system: Inventory

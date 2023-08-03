@@ -1,0 +1,20 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: inventory-catalog
+  description: webservices used to search ressources in the inventory
+  tags:
+    - java
+    - quarkus
+  links:
+    - url: https://www.gravitee.io/
+      title: gravitee configuration page
+spec:
+  type: service
+  lifecycle: production
+  providesApis: [inventory-api]
+  consumesApis: [messaging-kafka-connector-api]
+  dependsOn: [resource:default/inventory-db]
+  owner: team-inventory-1
+  system: Inventory

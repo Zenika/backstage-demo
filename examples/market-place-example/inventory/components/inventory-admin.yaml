@@ -1,0 +1,17 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: inventory-admin
+  description: inventory administration UI
+  tags:
+    - flash
+  links:
+    - url: https://www.adobe.com/fr/products/flashplayer/end-of-life-alternative.html
+      title: website
+spec:
+  type: website
+  lifecycle: deprecated
+  owner: team-inventory-1
+  consumesApis: [inventory-api]
+  system: Inventory

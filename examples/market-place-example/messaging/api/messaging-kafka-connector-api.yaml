@@ -1,0 +1,23 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: messaging-kafka-connector-api
+  description: Http kafka connector that allow webservice to produce  and consume messages through kafka cluster
+  links:
+    - url: https://github.com/swagger-api/swagger-petstore
+      title: GitHub Repo
+      icon: github
+    - url: https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml
+      title: API Spec
+      icon: code
+  annotations:
+#   backstage.io/adr-location: adrs
+#   backstage.io/techdocs-ref: dir:.
+spec:
+  type: openapi
+  lifecycle: production
+  subcomponentOf: messaging
+  owner: team-messaging-1
+  definition:
+    $text: https://raw.githubusercontent.com/vincentimes42/backstage-test/main/market-place-example/messaging/api/messaging-kafka-connector-api-swagger.yaml
