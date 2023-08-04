@@ -17,7 +17,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  subcomponentOf: payment_webservices
+  subcomponentOf: payment-webservices
   consumesApis: [messaging-kafka-connector-api, inventory-api]
   owner: team-payment-1
   definition:

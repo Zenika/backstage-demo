@@ -19,5 +19,6 @@ spec:
   lifecycle: production
   subcomponentOf: inventory-catalog
   owner: team-inventory-1
+  consumesApis: [messaging-kafka-connector-api]
   definition:
-    $text: https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v2.0/json/petstore.json
+    $text: https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml

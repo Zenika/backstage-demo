@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: payment_webservices
+  name: payment-webservices
   description: Payment back-end
   tags:
     - java
@@ -10,6 +10,8 @@ metadata:
   links:
     - url: https://www.gravitee.io/
       title: gravitee configuration page
+  annotations:
+    gitlab.com/project-id: '11903463' #'250833'
 spec:
   type: service
   lifecycle: production

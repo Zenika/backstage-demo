@@ -9,11 +9,11 @@ metadata:
   links:
     - url: https://play.google.com/
       title: google playstore app page
+  annotations:
+    gitlab.com/project-id: '14201241'
 spec:
   type: website
   lifecycle: experimental
   owner: team-vendor-1
-  # dependsOn: [TODO]
-  # providesApis: [TODO]
-  # consumesApis: [inventory-catalog-api,payment_api]
+  consumesApis: [inventory-api, payment-api]
   system: Vendor

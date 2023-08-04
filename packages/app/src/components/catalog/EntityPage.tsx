@@ -205,6 +205,10 @@ const websiteEntityPage = (
       {overviewContent}
     </EntityLayout.Route>
 
+    <EntityLayout.Route if={isGitlabAvailable} path="/gitlab" title="Gitlab">
+      <EntityGitlabContent />
+    </EntityLayout.Route>
+
     <EntityLayout.Route path="/ci-cd" title="CI/CD">
       {cicdContent}
     </EntityLayout.Route>
@@ -238,7 +242,9 @@ const defaultEntityPage = (
     <EntityLayout.Route path="/" title="Overview">
       {overviewContent}
     </EntityLayout.Route>
-
+    <EntityLayout.Route if={isGitlabAvailable} path="/gitlab" title="Gitlab">
+      <EntityGitlabContent />
+    </EntityLayout.Route>
     <EntityLayout.Route path="/docs" title="Docs">
       {techdocsContent}
     </EntityLayout.Route>

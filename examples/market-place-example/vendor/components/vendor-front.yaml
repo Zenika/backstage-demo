@@ -9,11 +9,11 @@ metadata:
   links:
     - url: https://react.dev/
       title: public url
+  annotations:
+    gitlab.com/project-id: '5261717'
 spec:
   type: website
   lifecycle: production
   owner: team-vendor-1
-  # dependsOn: [TODO]
-  # providesApis: [TODO]
-  # consumesApis: [inventory-catalog-api,payment_api]
+  consumesApis: [inventory-api, payment-api]
   system: Vendor

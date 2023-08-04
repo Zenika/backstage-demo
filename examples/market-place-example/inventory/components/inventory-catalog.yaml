@@ -10,6 +10,8 @@ metadata:
   links:
     - url: https://www.gravitee.io/
       title: gravitee configuration page
+  annotations:
+    gitlab.com/project-id: '250833'
 spec:
   type: service
   lifecycle: production
