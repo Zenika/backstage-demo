@@ -39,7 +39,7 @@ import {
   EntityOwnershipCard,
 } from '@backstage/plugin-org';
 import { EntityTechdocsContent } from '@backstage/plugin-techdocs';
-import { EmptyState, ItemCardGrid } from '@backstage/core-components';
+import { EmptyState } from '@backstage/core-components';
 import {
   Direction,
   EntityCatalogGraphCard,
@@ -53,6 +53,8 @@ import {
   RELATION_HAS_PART,
   RELATION_PART_OF,
   RELATION_PROVIDES_API,
+  RELATION_CHILD_OF,
+  RELATION_PARENT_OF,
 } from '@backstage/catalog-model';
 
 import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
@@ -60,7 +62,6 @@ import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 
 import { EntityAdrContent, isAdrAvailable } from '@backstage/plugin-adr';
 import { TeamAPI } from '@internal/plugin-teamapi';
-
 
 import {
   isGitlabAvailable,
@@ -321,7 +322,21 @@ const groupPage = (
           <EntityOwnershipCard variant="gridItem" />
         </Grid>
         <Grid item xs={12}>
-          <EntityMembersListCard />
+          <EntityMembersListCard showAggregateMembersToggle/>
+        </Grid>
+        <Grid item xs={12}>
+          <EntityCatalogGraphCard
+            variant="gridItem"
+            direction={Direction.LEFT_RIGHT}
+            title="Graph"
+            maxDepth={2}
+            height={400}
+            relations={[
+              RELATION_PARENT_OF,
+              RELATION_CHILD_OF,
+            ]}
+            unidirectional={false}
+          />
         </Grid>
       </Grid>
     </EntityLayout.Route>
