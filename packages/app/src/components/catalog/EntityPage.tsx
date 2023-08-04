@@ -328,7 +328,7 @@ const groupPage = (
           <EntityCatalogGraphCard
             variant="gridItem"
             direction={Direction.LEFT_RIGHT}
-            title="closely related groups"
+            title="Graph"
             maxDepth={2}
             height={400}
             relations={[
