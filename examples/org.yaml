@@ -12,6 +12,51 @@ apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: guests
+  description: The group referencing all the guest users
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
 spec:
-  type: team
+  type: root
+  profile:
+    displayName: Guests
+    email: gests@example.com
+    picture: https://cdn.pixabay.com/photo/2018/03/21/06/30/community-3245739_1280.png
+  children: []
+---
+# Practice Group tree
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Practices
+  description: The root group of the practices groups
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: root
+  profile:
+    displayName: Practices
+    email: practrices@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Pratices
+  children: []
+---
+# Organization Group tree
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Organization
+  description: The root group of the teams constituing the company
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: root
+  profile:
+    displayName: Organization
+    email: organization@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Organization
   children: []

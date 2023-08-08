@@ -1,0 +1,288 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Software
+  description: The group referencing all the users and groups with software skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Software
+    email: software@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Software
+  children: []
+  parent: Practices
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Architecture
+  description: The group referencing all the users and groups with sofware architecture activities
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Architecture
+    email: architecture@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Architecture
+  children: []
+  parent: Software
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Backend
+  description: The group referencing all the users and groups with backend development skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Backend Development
+    email: backend@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Backend
+  children: []
+  parent: Software
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: JAVA
+  description: Java User Group
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: JAVA
+    email: java@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=JAVA
+  children: []
+  parent: Backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Kafka
+  description: The group referencing all the users and groups with Microsoft Kafka skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Kafka
+    email: Kafka@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Kafka
+  children: []
+  parent: Backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: NodeJS
+  description: The group referencing all the users and groups with Microsoft .NET backend development skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: NodeJS
+    email: nodejs@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=NodeJS
+  children: []
+  parent: Backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Frontend
+  description: The group referencing all the users and groups with frontend development skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Frontend Development
+    email: frontend@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Frontend
+  children: []
+  parent: Software
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Angular
+  description: The group referencing all the users and groups with Angular frontend development skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Angular
+    email: angular@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Angular
+  children: []
+  parent: Frontend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: ReactJS
+  description: The group referencing all the users and groups with ReactJS frontend development skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: ReactJS
+    email: reactjs@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=ReactJS
+  children: []
+  parent: Frontend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: DevOps
+  description: The group referencing all the users and groups with DevOps skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: DevOps
+    email: Dev-Ops@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=DevOps
+  children: []
+  parent: Software
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Azure
+  description: The group referencing all the users and groups with Azure cloud platform skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Azure
+    email: azure@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Azure
+  children: []
+  parent: DevOps
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Kubernetes
+  description: The group referencing all the users and groups with Kubernetes skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Kubernetes
+    email: kubernetes@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Kubernetes
+  children: []
+  parent: DevOps
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Business
+  description: The group referencing all the users and groups with tranversal or business activities
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Business
+    email: business@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Business
+  children: []
+  parent: Practices
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Management
+  description: The group referencing all the users and groups with mangement activities
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Management
+    email: Management@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Management
+  children: []
+  parent: Business
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Lean
+  description: The group referencing all the users and groups with  lean mangement skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Lean
+    email: Lean@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Lean
+  children: []
+  parent: Management
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Agile
+  description: The group referencing all the users and groups with Agile mangement skills
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: team
+  profile:
+    displayName: Agile
+    email: agile@example.com
+    picture: https://api.dicebear.com/6.x/initials/svg?seed=Agile
+  children: []
+  parent: Management

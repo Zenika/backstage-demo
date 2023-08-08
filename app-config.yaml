@@ -38,6 +38,7 @@ backend:
   reading:
     allow:
       - host: 'raw.githubusercontent.com'
+      - host: 'github.com'
 
 integrations:
   github:
@@ -85,7 +86,7 @@ catalog:
     entityFilename: catalog-info.yaml
     pullRequestBranchName: backstage-integration
   rules:
-    - allow: [Component, System, API, Resource, Location, User, Group]
+    - allow: [Domain, Component, System, API, Resource, Location, User, Group]
   locations:
     # Local example data, file locations are relative to the backend process, typically `packages/backend`
     - type: file
@@ -103,7 +104,21 @@ catalog:
       rules:
         - allow: [User, Group]
 
+    # Local example practices data
+    - type: file
+      target: ../../examples/practices.yaml
+      rules:
+        - allow: [User, Group]
     ## Uncomment these lines to add more example data
+
+    # Local example data, file locations are relative to the backend process, typically `packages/backend`
+    #- type: file
+    #  target: /workspaces/backstage-demo/examples/market-place-example/all.yaml
+
+    ## same dataset but in a remote repository
+    - type: url
+      target: https://raw.githubusercontent.com/Zenika/backstage-demo-marketplace-dataset/main/market-place-example/all.yaml
+
     # - type: url
     #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml
 
