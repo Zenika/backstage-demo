@@ -68,6 +68,12 @@ import {
   EntityGitlabContent,
 } from '@immobiliarelabs/backstage-plugin-gitlab';
 
+import {
+  isNewRelicDashboardAvailable,
+  EntityNewRelicDashboardContent,
+  EntityNewRelicDashboardCard,
+} from '@backstage/plugin-newrelic-dashboard';
+
 const techdocsContent = (
   <EntityTechdocsContent>
     <TechDocsAddons>
@@ -161,6 +167,14 @@ const serviceEntityPage = (
 
     <EntityLayout.Route if={isGitlabAvailable} path="/gitlab" title="Gitlab">
       <EntityGitlabContent />
+    </EntityLayout.Route>
+
+    <EntityLayout.Route
+      if={isNewRelicDashboardAvailable}
+      path="/newrelic-dashboard"
+      title="New Relic Dashboard"
+    >
+      <EntityNewRelicDashboardContent />
     </EntityLayout.Route>
 
     <EntityLayout.Route path="/ci-cd" title="CI/CD">
