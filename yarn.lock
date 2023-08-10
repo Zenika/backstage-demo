@@ -2985,6 +2985,21 @@
     react-use "^17.2.4"
     zod "~3.21.4"
 
+"@backstage/plugin-newrelic-dashboard@^0.2.13":
+  version "0.2.13"
+  resolved "https://registry.yarnpkg.com/@backstage/plugin-newrelic-dashboard/-/plugin-newrelic-dashboard-0.2.13.tgz#a94baf459d7a3efdc3b6ad1c239fb026e79b30ff"
+  integrity sha512-4cHnIdcZzz3bo7cauKXcC8m27WIkTfFD0XLCktXEC44W6yTrPRNrUVAH2DQChXLHz5gamvPNj2q0If7DO0KrCQ==
+  dependencies:
+    "@backstage/catalog-model" "^1.4.1"
+    "@backstage/core-components" "^0.13.3"
+    "@backstage/core-plugin-api" "^1.5.3"
+    "@backstage/errors" "^1.2.1"
+    "@backstage/plugin-catalog-react" "^1.8.0"
+    "@material-ui/core" "^4.12.2"
+    "@material-ui/icons" "^4.9.1"
+    "@material-ui/lab" "4.0.0-alpha.61"
+    react-use "^17.2.4"
+
 "@backstage/plugin-org@^0.6.10":
   version "0.6.10"
   resolved "https://registry.yarnpkg.com/@backstage/plugin-org/-/plugin-org-0.6.10.tgz#c7feb391ebfa584a8de9c6a2a05a230c87f9a32e"
@@ -8998,6 +9013,7 @@ anymatch@^3.0.3, anymatch@~3.1.2:
     "@backstage/plugin-catalog-react" "^1.8.0"
     "@backstage/plugin-explore" "^0.4.6"
     "@backstage/plugin-github-actions" "^0.6.1"
+    "@backstage/plugin-newrelic-dashboard" "^0.2.13"
     "@backstage/plugin-org" "^0.6.10"
     "@backstage/plugin-permission-react" "^0.4.14"
     "@backstage/plugin-scaffolder" "^1.14.1"
