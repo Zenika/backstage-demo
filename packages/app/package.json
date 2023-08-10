@@ -34,6 +34,7 @@
     "@backstage/plugin-catalog-react": "^1.8.0",
     "@backstage/plugin-explore": "^0.4.6",
     "@backstage/plugin-github-actions": "^0.6.1",
+    "@backstage/plugin-newrelic": "^0.3.38",
     "@backstage/plugin-newrelic-dashboard": "^0.2.13",
     "@backstage/plugin-org": "^0.6.10",
     "@backstage/plugin-permission-react": "^0.4.14",

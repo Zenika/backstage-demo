@@ -30,6 +30,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import { useApp } from '@backstage/core-plugin-api';
 import BuildIcon from '@material-ui/icons/Build';
+import ExtensionIcon from '@material-ui/icons/ExtensionOutlined';
 
 const useSidebarLogoStyles = makeStyles({
   root: {
@@ -116,6 +117,7 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
         {/* End global nav */}
         <SidebarDivider />
         <SidebarScrollWrapper>
+          <SidebarItem icon={ExtensionIcon} to="newrelic" text="New Relic" />
           <SidebarItem icon={MapIcon} to="tech-radar" text="Tech Radar" />
         </SidebarScrollWrapper>
         <SidebarDivider />

@@ -50,6 +50,7 @@ import ZenikaDarkTheme from './themes/zenikaDark';
 import { UnifiedThemeProvider } from '@backstage/theme';
 import { ToolboxPage } from '@drodil/backstage-plugin-toolbox';
 import { ExplorePage } from './components/explore/ExplorePage';
+import { NewRelicPage } from '@backstage/plugin-newrelic';
 
 const app = createApp({
   apis,
@@ -134,6 +135,7 @@ const routes = (
     <Route path="/create" element={<ScaffolderPage />} />
     <Route path="/api-docs" element={<ApiExplorerPage />} />
     <Route path="/explore" element={<ExplorePage />} />
+    <Route path="/newrelic" element={<NewRelicPage />} />
     <Route
       path="/tech-radar"
       element={<TechRadarPage width={1500} height={800} />}
