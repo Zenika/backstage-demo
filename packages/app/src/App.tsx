@@ -59,14 +59,14 @@ import { SignInProviderConfig, SignInPage } from '@backstage/core-components';
 const googleProvider: SignInProviderConfig = {
   id: 'google-auth-provider',
   title: 'Google',
-  message: 'Sign in using Google',
+  message: 'Sign in as temporary user using Google',
   apiRef: googleAuthApiRef,
 };
 
 const githubProvider: SignInProviderConfig = {
   id: 'github-auth-provider',
   title: 'GitHub',
-  message: 'Sign in using GitHub',
+  message: 'Sign in as validated user using GitHub',
   apiRef: githubAuthApiRef,
 };
 
@@ -74,7 +74,11 @@ const app = createApp({
   apis,
   components: {
     SignInPage: props => (
-      <SignInPage {...props} auto providers={[googleProvider]} />
+      <SignInPage
+        {...props}
+        auto
+        providers={['guest', githubProvider, googleProvider]}
+      />
     ),
   },
   themes: [
