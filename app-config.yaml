@@ -25,7 +25,6 @@ backend:
     origin: http://localhost:3000
     methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
     credentials: true
-
   database:
     client: pg
     connection:
@@ -39,13 +38,18 @@ backend:
     allow:
       - host: 'raw.githubusercontent.com'
       - host: 'github.com'
+  env:
+    orga:
+      url: 'https://github.com/zenika-backstage-demo'
+      schedule_frequency: 24
+      schedule_timeout: 15
 
 integrations:
   github:
     - host: github.com
-      # This is a Personal Access Token or PAT from GitHub. You can find out how to generate this token, and more information
-      # about setting up the GitHub integration here: https://backstage.io/docs/getting-started/configuration#setting-up-a-github-integration
       token: ${GITHUB_TOKEN}
+      apps:
+        - $include: github-app.yml
 
   gitlab:
     - host: gitlab.com
