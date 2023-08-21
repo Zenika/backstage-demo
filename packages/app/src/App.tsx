@@ -52,8 +52,7 @@ import { ToolboxPage } from '@drodil/backstage-plugin-toolbox';
 import { ExplorePage } from './components/explore/ExplorePage';
 import { NewRelicPage } from '@backstage/plugin-newrelic';
 
-import { githubAuthApiRef } from '@backstage/core-plugin-api';
-import { googleAuthApiRef } from '@backstage/core-plugin-api';
+import { githubAuthApiRef, googleAuthApiRef } from '@backstage/core-plugin-api';
 import { SignInProviderConfig, SignInPage } from '@backstage/core-components';
 
 const googleProvider: SignInProviderConfig = {

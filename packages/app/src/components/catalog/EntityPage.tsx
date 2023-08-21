@@ -351,7 +351,7 @@ const groupPage = (
           <EntityOwnershipCard variant="gridItem" />
         </Grid>
         <Grid item xs={12}>
-          <EntityMembersListCard showAggregateMembersToggle/>
+          <EntityMembersListCard showAggregateMembersToggle />
         </Grid>
         <Grid item xs={12}>
           <EntityCatalogGraphCard
@@ -360,10 +360,7 @@ const groupPage = (
             title="Graph"
             maxDepth={2}
             height={400}
-            relations={[
-              RELATION_PARENT_OF,
-              RELATION_CHILD_OF,
-            ]}
+            relations={[RELATION_PARENT_OF, RELATION_CHILD_OF]}
             unidirectional={false}
           />
         </Grid>
