@@ -52,8 +52,34 @@ import { ToolboxPage } from '@drodil/backstage-plugin-toolbox';
 import { ExplorePage } from './components/explore/ExplorePage';
 import { NewRelicPage } from '@backstage/plugin-newrelic';
 
+import { githubAuthApiRef, googleAuthApiRef } from '@backstage/core-plugin-api';
+import { SignInProviderConfig, SignInPage } from '@backstage/core-components';
+
+const googleProvider: SignInProviderConfig = {
+  id: 'google-auth-provider',
+  title: 'Google',
+  message: 'Sign in as temporary user using Google',
+  apiRef: googleAuthApiRef,
+};
+
+const githubProvider: SignInProviderConfig = {
+  id: 'github-auth-provider',
+  title: 'GitHub',
+  message: 'Sign in as validated user using GitHub',
+  apiRef: githubAuthApiRef,
+};
+
 const app = createApp({
   apis,
+  components: {
+    SignInPage: props => (
+      <SignInPage
+        {...props}
+        auto
+        providers={['guest', githubProvider, googleProvider]}
+      />
+    ),
+  },
   themes: [
     {
       id: 'zenika_light',
