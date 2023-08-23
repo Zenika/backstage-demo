@@ -71,7 +71,6 @@ import {
 import {
   isNewRelicDashboardAvailable,
   EntityNewRelicDashboardContent,
-  EntityNewRelicDashboardCard,
 } from '@backstage/plugin-newrelic-dashboard';
 
 const techdocsContent = (
