@@ -38,6 +38,7 @@ backend:
     allow:
       - host: 'raw.githubusercontent.com'
       - host: 'github.com'
+      - host: 'api.github.com'
   env:
     orga:
       url: 'https://github.com/zenika-backstage-demo'
@@ -133,12 +134,12 @@ catalog:
     ## Uncomment these lines to add more example data
 
     # Local example data, file locations are relative to the backend process, typically `packages/backend`
-    #- type: file
-    #  target: /workspaces/backstage-demo/examples/market-place-example/all.yaml
+    # - type: file
+    #  target: ../../examples/market-place-example/all.yaml
 
     ## same dataset but in a remote repository
     - type: url
-      target: https://raw.githubusercontent.com/Zenika/backstage-demo-marketplace-dataset/main/market-place-example/all.yaml
+      target: https://github.com/Zenika/backstage-demo-marketplace-dataset/blob/main/catalog-info.yaml
 
     # - type: url
     #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml
