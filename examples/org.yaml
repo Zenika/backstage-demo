@@ -24,6 +24,25 @@ spec:
     email: gests@example.com
     picture: https://cdn.pixabay.com/photo/2018/03/21/06/30/community-3245739_1280.png
   children: []
+  members: [guest]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: google_guests
+  description: The group referencing all the authenticated google guest users
+  links:
+    - url: https://slack.com/
+      title: Slack chanel
+      icon: message
+spec:
+  type: root
+  profile:
+    displayName: Google Guests
+    email: gests@example.com
+    picture: https://cdn.pixabay.com/photo/2018/03/21/06/30/community-3245749_1280.png
+  children: []
 ---
 # Practice Group tree
 apiVersion: backstage.io/v1alpha1

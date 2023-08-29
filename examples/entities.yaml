@@ -5,6 +5,18 @@ kind: System
 metadata:
   name: examples
 spec:
+  owner: google_guests
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: Welcome
+  description: |
+    Welcome to backstage. if you read that it us because you are not authentified and thus have a limited acces to backstage projetcs and peoples.
+    To authentify pourself just go on the settings page, and click on the icon in the profile section
+  title: Welcome
+spec:
   owner: guests
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
@@ -15,7 +27,7 @@ metadata:
 spec:
   type: website
   lifecycle: experimental
-  owner: guests
+  owner: google_guests
   system: examples
   providesApis: [example-grpc-api]
 ---
@@ -27,7 +39,7 @@ metadata:
 spec:
   type: grpc
   lifecycle: experimental
-  owner: guests
+  owner: google_guests
   system: examples
   definition: |
     syntax = "proto3";

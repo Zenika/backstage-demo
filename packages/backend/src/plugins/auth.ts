@@ -12,7 +12,7 @@ import { PluginEnvironment } from '../types';
 
 const groupEntityRef = stringifyEntityRef({
   kind: 'Group',
-  name: 'guests',
+  name: 'google_guests',
   namespace: DEFAULT_NAMESPACE,
 });
 
