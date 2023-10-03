@@ -56,6 +56,10 @@ integrations:
     - host: gitlab.com
       token: ${GITLAB_TOKEN}
 
+  znk.io/grafana:
+    - host: http://localhost:3003
+      token: ${GRAFANA_TOKEN_1}
+
 proxy:
   ### Example for how to add a proxy endpoint for the frontend.
   ### A typical reason to do this is to handle HTTPS and CORS for internal services.
