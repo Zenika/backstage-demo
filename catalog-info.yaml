@@ -10,7 +10,9 @@ metadata:
   annotations:
     backstage.io/adr-location: adrs
     backstage.io/techdocs-ref: dir:.
-    znk.io/grafana: http://localhost:3003
+    znk.io/grafana:
+      - host: http://localhost:3003
+        dashboard: a0cbcf74-adcf-4c8f-a60c-aa641d426fbc
 spec:
   type: service
   owner: group:zenika
