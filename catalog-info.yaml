@@ -10,7 +10,7 @@ metadata:
   annotations:
     backstage.io/adr-location: adrs
     backstage.io/techdocs-ref: dir:.
-    znk.io/grafana: http://grafana:3003@a0cbcf74-adcf-4c8f-a60c-aa641d426fbc
+    znk.io/grafana: http://grafana:3003@a9b7dfee-a34e-4332-adf8-3518c3fdce44
 spec:
   type: service
   owner: group:zenika
